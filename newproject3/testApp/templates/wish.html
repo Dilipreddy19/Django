@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/demo.css' %}"/>
+        <title>{% block title %}Welcome to Online Store{% endblock %}</title>
+    </head>
+    <body>
+        <h1>Welcome to Online Store</h1>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/product">Products</a></li>
+                </ul>
+            </aside>
+
+            <section class="content">
+                {% block content %}
+                <h2>Information</h2>
+                <p>Select a menu item to view its content here.</p>
+                {% endblock %}
+            </section>
+        </div>
+    </body>
+    <footer class="site-footer">
+        <p>
+            © {{ now|date:"Y" }} My Online Store — Free shipping over $50 · Easy 30-day returns ·
+            Secure checkout · 24/7 support. Join our newsletter for exclusive deals!
+        </p>
+    </footer>
+</html>

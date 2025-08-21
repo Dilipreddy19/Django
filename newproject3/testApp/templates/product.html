@@ -1,0 +1,17 @@
+{% extends 'wish.html' %}
+
+{% block title %}Products | Online Store{% endblock %}
+
+{% block content %}
+<h1>Products</h1>
+<ul>
+{% for item in items %}
+    <li>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.desc }}</p>
+        <strong>${{ item.price }}</strong>
+        <button type="button">Add to Cart</button>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
