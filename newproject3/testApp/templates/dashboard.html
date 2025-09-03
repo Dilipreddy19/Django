@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <body>
+        <h2>Welcome,{{ username }}</h2>
+        {% if last_login %}
+        <p>Your last login was: {{ last_login}}</p>
+        {% else %}
+        <p> This looks like first login</p>
+        {% endif %}
+        <p><a href="{% url 'logout' %}">Logout</a></p>
+    </body>
+</html>
+
+
+
+
+<!-- <a href="{% url 'logout' %}">Logout</a> -->
+ 
+

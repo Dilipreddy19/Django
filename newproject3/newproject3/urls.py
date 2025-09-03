@@ -20,11 +20,15 @@ from testApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('wish/',views.wish_view),
-    path('home/',views.home_view),
+    path('wish/',views.wish_view,name='wish'),
+    path('home/',views.home_view,name='home'),
     path('about/',views.about_view),
     path('contact/',views.contact_view),
     path('product/',views.product_view),
-    path('signUp/',views.signupform),
-    path('Login/', views.loginView),
+    # path('signUp/',views.signupform),
+    # path('Login/', views.loginView),
+    path('register/',views.register_view,name='register'),
+    path('login/',views.login_view,name='login'),
+    path('dashboard/',views.dashboard_view),
+    path('logout/',views.logout_view,name='logout'),
 ]

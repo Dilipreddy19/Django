@@ -1,15 +1,16 @@
 {% extends 'wish.html' %}
 {% load static %}
-{% block title %} SignUp {% endblock %}
+{% block title %} Registation Form{% endblock %}
 
 {% block content %}
-    <h1 class="head-container">SignUp</h1>
+    <h1 class="head-container">Registation</h1>
 
     <form method="post">
         {{form.as_p}}
         {% csrf_token %}
         <input type="submit" value="submit" />
     </form>
+    <p>Already have an account<a href="{% url 'login' %}"> Login Here</a></p>
     {% endblock %}
 
     
